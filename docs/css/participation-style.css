@@ -1,0 +1,255 @@
+.participation-section {
+    width: 100%;
+}
+
+.participation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 16px;
+    gap: 2px;
+    background: #B8DFF5;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.participation-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #000000;
+    margin: 0 auto 24px auto;
+    text-align: center;
+}
+
+.participation-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 2px;
+    width: 100%;
+}
+
+.participation-cards .card {
+    background-color: #FAFAFF;
+    width: 100%;
+}
+
+.participation-cards .card-content {
+    padding: 32px 24px;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+.participation-cards .card-title {
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.participation-cards .card-text {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.participation-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.participation-link {
+    color: #003366;
+    text-decoration: none;
+}
+
+.participation-link:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+.place-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    width: 100%;
+    flex: 1;
+}
+
+.place-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.yandex-map {
+    width: calc(100% + 32px);
+    height: 400px;
+    margin: 2px -16px 0 -16px;
+}
+
+.contacts-section {
+    background-color: #B8DFF5;
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+    padding: 24px 16px 0 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.contacts-section .participation-container {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.contacts-cards .card {
+    background-color: #FAFAFF;
+}
+
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.contacts-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.contacts-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    margin: 0;
+}
+
+.contacts-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+.contacts-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contacts-cards .card-text {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+@media (min-width: 770px) {
+
+    .participation-container {
+        padding: 24px;
+    }
+    
+    .contacts-section {
+        width: calc(100% + 48px);
+        margin: 0 -24px;
+        padding: 24px 24px 0 24px;
+    }
+    
+    .contacts-section .participation-container {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .yandex-map {
+        width: calc(100% + 48px);
+        margin: 2px -24px 0 -24px;
+    }
+    
+    .contacts-section .participation-cards {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .contacts-cards .card {
+        flex: 1;
+        min-width: calc(50% - 1px);
+    }
+    
+    .place-section .participation-cards {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .place-section .participation-cards .card {
+        flex: 1;
+        min-width: calc(50% - 1px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .participation-cards {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .participation-cards .card {
+        flex: 1;
+        min-width: calc(33.33% - 1.34px);
+    }
+    
+    .place-images {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .contacts-cards .card {
+        min-width: calc(50% - 1px);
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .participation-container {
+        padding: 48px;
+    }
+    
+    .contacts-section {
+        width: calc(100% + 234px);
+        margin: 0 -117px;
+        padding: 48px 117px 0 117px;
+    }
+    
+    .contacts-section .participation-container {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .yandex-map {
+        width: calc(100% + 234px);
+        margin: 2px -117px 0 -117px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .contacts-section {
+        width: calc(100% + 320px);
+        margin: 0 -160px;
+        padding: 48px 160px 0 160px;
+    }
+    
+    .yandex-map {
+        width: calc(100% + 320px);
+        margin: 2px -160px 0 -160px;
+    }
+}
