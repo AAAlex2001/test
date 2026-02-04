@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main — карточки</title>
+    <link rel="stylesheet" href="../css/card-style.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/tabs-style.css">
+    <link rel="stylesheet" href="../css/accordion-style.css">
+    <link rel="stylesheet" href="../css/buttons-style.css">
+    <link rel="stylesheet" href="../css/participation-style.css">
+    <link rel="stylesheet" href="../css/footer-style.css">
+    <link rel="stylesheet" href="../css/header-style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header-logo">
+        <img src="../public/logo.svg" alt="Горный университет">
+      </a>
+      <button class="header-burger">
+        <span class="header-burger-line"></span>
+        <span class="header-burger-line"></span>
+        <span class="header-burger-line"></span>
+        <span class="header-burger-line"></span>
+      </button>
+      <nav class="header-nav">
+        <a href="#" class="header-nav-link">Конференция</a>
+        <a href="#" class="header-nav-link">Программа</a>
+        <a href="#" class="header-nav-link">Участникам</a>
+        <a href="#" class="header-nav-link">Контакты</a>
+      </nav>
+      <div class="header-right">
+        <div class="header-language">
+          <button class="header-lang-button">Rus</button>
+          <button class="header-lang-button active">Eng</button>
+        </div>
+        <a href="#" class="header-payment-button">Регистрация</a>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="hero"></section>
+      <section class="advertisement" id="advertisement"></section>
+      <section class="tabs-section" id="tabs-root"></section>
+      <section class="action-buttons-section">
+        <div class="action-buttons-container">
+          <div class="action-buttons-top">
+            <a href="#" class="action-button" download>
+              <span class="action-button-text">Программа</span>
+              <img src="../public/download.svg" alt="" class="action-button-icon">
+            </a>
+            <a href="#" class="action-button" download>
+              <span class="action-button-text">Требования к оформлению</span>
+              <img src="../public/download.svg" alt="" class="action-button-icon">
+            </a>
+          </div>
+          <a href="#" class="action-button" target="_blank">
+            <span class="action-button-text">Регистрация</span>
+            <img src="../public/link.svg" alt="" class="action-button-icon">
+          </a>
+        </div>
+      </section>
+      <section class="participation-section conditions-section">
+        <div class="participation-container">
+          <h1 class="participation-title">Условия участия</h1>
+          <div class="participation-cards">
+            <div class="card">
+              <div class="card-content">
+                <h2 class="card-title">Общие сведения</h2>
+                <div class="participation-card-content">
+                  <p class="card-text">Конференция проходит в форме научных докладов.</p>
+                  <p class="card-text"><strong>Рабочий язык:</strong> русский и английский.</p>
+                  <p class="card-text">Участники конференции: преподаватели, аспиранты, магистранты, студенты Санкт-Петербургского горного университета и университетов России и других стран, представители компаний.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <h2 class="card-title">Условия участия</h2>
+                <div class="participation-card-content">
+                  <p class="card-text">Желающим принять участие в конференции необходимо в срок до 09.01.2024 г. пройти регистрацию на сайте конференции, заполнив <a href="#" target="_blank" class="participation-link">регистрационную форму</a> и предоставив тезисы доклада, оформленные в соответствии с требованиями.</p>
+                  <p class="card-text">К тезисам в обязательном порядке должны быть приложены экспертные заключения о возможности опубликования, полученные в организации, представители которой является авторы.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <h2 class="card-title">Важно!</h2>
+                <div class="participation-card-content">
+                  <p class="card-text">На материалы докладов, рекомендованных для публикации, должны быть оформлены экспертные заключения Университета.</p>
+                  <p class="card-text">Регламент прохождения экспертного контроля в Горном университете и шаблоны документов размещены в Личном кабинете: <a href="https://clck.ru/3D55UN" target="_blank" class="participation-link">clck.ru/3D55UN</a>.</p>
+                  <p class="card-text">Оригинальность материалов должна быть не менее 70% (обязательное предоставление справки о проверке оригинальности).</p>
+                  <p class="card-text">В случае если с одним докладом выступает несколько участников, регистрацию на сайте конференции должен пройти каждый соавтор отдельно.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="participation-section place-section">
+        <div class="participation-container">
+          <h1 class="participation-title">Место проведения</h1>
+          <div class="participation-cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="participation-card-content">
+                  <p class="card-text"><a href="https://spmi.ru/" target="_blank" class="participation-link">Санкт-Петербург</a>, основанный в 1703 году Петром I, является одним из красивейших городов мира и по праву считается культурной столицей России. Помимо богатого культурного наследия город является одним из крупнейших научно-образовательных центров России, где ежегодно проходит обучение около 400 тысяч студентов и аспирантов, что по праву закрепило за Санкт-Петербургом статус студенческой столицы России.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="participation-card-content">
+                  <p class="card-text"><a href="https://spmi.ru/" target="_blank" class="participation-link">Санкт-Петербургский горный университет императрицы Екатерины II</a> сегодня является ведущим высшим политехническим учебным заведением, осуществляющим подготовку высококвалифицированных инженерных кадров по всем специальностям, необходимым для обеспечения работы минерально-сырьевого комплекса России – от поиска и разведки полезных ископаемых до получения конечного продукта.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="place-images">
+            <img src="../public/place1.jpg" alt="Санкт-Петербург" class="place-image">
+            <img src="../public/place2.jpg" alt="Санкт-Петербург" class="place-image">
+            <img src="../public/place3.png" alt="Горный университет" class="place-image">
+            <img src="../public/place4.png" alt="Горный университет" class="place-image">
+          </div>
+        </div>
+      </section>
+      <section class="participation-section contacts-section">
+        <div class="participation-container">
+          <h1 class="participation-title">Контакты</h1>
+          <div class="participation-cards contacts-cards">
+            <div class="card contacts-card">
+              <div class="card-content">
+                <h2 class="card-title">Место проведения</h2>
+                <div class="contacts-content">
+                  <div class="contacts-group">
+                    <p class="contacts-subtitle">Санкт-Петербургский горный университет императрицы Екатерины II</p>
+                    <div class="contacts-item">
+                      <img src="../public/Icon place.svg" alt="" class="contacts-icon">
+                      <p class="card-text">Россия, 199106, г. Санкт-Петербург, Васильевский остров, 21-я линия, д. 2, ауд. 1205 УЦ№1. Кафедра землеустройства и кадастров</p>
+                    </div>
+                    <div class="contacts-item">
+                      <img src="../public/telephone.svg" alt="" class="contacts-icon">
+                      <p class="card-text">+7 (812) 322-29-23<br>+7 (812) 321-54-36</p>
+                    </div>
+                    <div class="contacts-item">
+                      <img src="../public/mail.svg" alt="" class="contacts-icon">
+                      <div>
+                        <a href="mailto:dyachkova_is@pers.spmi.ru" class="participation-link">dyachkova_is@pers.spmi.ru</a><br>
+                        <a href="mailto:Bykova_EN@pers.spmi.ru" class="participation-link">Bykova_EN@pers.spmi.ru</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card contacts-card">
+              <div class="card-content">
+                <h2 class="card-title">Организационный комитет</h2>
+                <div class="contacts-content">
+                  <div class="contacts-group">
+                    <div class="contacts-item">
+                      <img src="../public/telephone.svg" alt="" class="contacts-icon">
+                      <p class="card-text">+7 (812) 328-84-96</p>
+                    </div>
+                    <div class="contacts-item">
+                      <img src="../public/mail.svg" alt="" class="contacts-icon">
+                      <div>
+                        <a href="mailto:nirs@spmi.ru" class="participation-link">nirs@spmi.ru</a><br>
+                        <a href="mailto:land.spmi@yandex.ru" class="participation-link">land.spmi@yandex.ru</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="map" class="yandex-map"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="footer-link footer-link-privacy">Политика конфиденциальности</a>
+      <a href="#" class="footer-link footer-link-cookie">Политика использования cookie-файлов</a>
+      <p class="footer-copyright">© 2022 Санкт-Петербургский горный университет</p>
+    </footer>
+
+    <script src="../js/card.js"></script>
+    <script src="../js/accordion.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      renderTabs('tabs-root');
+    </script>
+    <script>
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+          center: [59.9363, 30.2482],
+          zoom: 13,
+          controls: ['zoomControl']
+        });
+
+        var label1 = new ymaps.Placemark([59.9418, 30.2303], {
+          iconContent: 'МФК Горный'
+        }, {
+          preset: 'islands#orangeStretchyIcon'
+        });
+
+        var label2 = new ymaps.Placemark([59.9308, 30.2661], {
+          iconContent: 'Горный университет'
+        }, {
+          preset: 'islands#blueStretchyIcon'
+        });
+
+        myMap.geoObjects.add(label1);
+        myMap.geoObjects.add(label2);
+      });
+    </script>
+  </body>
+</html>

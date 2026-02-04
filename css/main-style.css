@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+     display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.hero {
+    background-color: #27509B;
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+    padding: 92px 16px 24px 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.hero .card {
+    width: 100%;
+    height: 100%;
+}
+
+.advertisement {
+    width: 100%;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+.advertisement .card {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 770px) {
+    body {
+        padding: 0 24px;
+    }
+    main {
+    gap: 120px;
+    }
+    
+    .hero {
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: calc(100% + 48px);
+        margin: 0 -24px;
+        padding: 92px 24px 60px 24px;
+    }
+    
+    .hero .card-wrapper:nth-child(1),
+    .hero .card-wrapper:nth-child(2) {
+        width: 100%;
+    }
+    
+    .hero .card-wrapper:nth-child(3),
+    .hero .card-wrapper:nth-child(4) {
+        flex: 1;
+        min-width: calc(50% - 1px);
+    }
+    
+    .hero .card-wrapper:nth-child(4) .card-content {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    
+    .hero .card-wrapper {
+        display: flex;
+        flex: 1;
+    }
+    
+    .hero .card-wrapper:nth-child(1),
+    .hero .card-wrapper:nth-child(2) {
+        flex: 1;
+        min-width: calc(50% - 1px);
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        padding: 0 117px;
+    }
+    main {
+    gap: 160px;
+    }
+    
+    .hero {
+        width: calc(100% + 234px);
+        margin: 0 -117px;
+        padding: 116px 117px 60px 117px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        padding: 0 160px;
+    }
+    
+    .hero {
+        width: calc(100% + 320px);
+        margin: 0 -160px;
+        padding: 116px 160px 60px 160px;
+    }
+    
+    .advertisement .card {
+        max-width: 960px;
+    }
+}

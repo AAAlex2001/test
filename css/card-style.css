@@ -1,0 +1,114 @@
+.card {
+    font-family: Inter, sans-serif;
+    background-color: #B8DFF5;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    flex: 1;
+    gap: 16px;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+
+.card:has(.card-icon) .card-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110.00000000000001%;
+    color: #000000;
+    margin: 0;
+}
+
+.card-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0;
+}
+
+.card-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.advertisement .card-content {
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+.advertisement .card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.advertisement .card-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.advertisement .card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+@media (min-width: 770px) {
+    .card-content {
+        padding: 32px 24px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .card-title {
+        font-size: 36px;
+        line-height: 110.00000000000001%;
+    }
+    .card-content {
+        padding: 48px;
+    }
+    
+    .card-text {
+        font-size: 24px;
+        line-height: 100%;
+    }
+    
+    .advertisement .card-title {
+        font-size: 24px;
+        line-height: 140%;
+    }
+}
