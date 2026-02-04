@@ -70,7 +70,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 15px;
 }
 
 .header-language {
@@ -149,6 +149,9 @@
         line-height: 120%;
         letter-spacing: 0.01em;
     }
+    .header-right {
+        gap: 20px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -191,6 +194,9 @@
     
     .header-right {
         margin-left: auto;
+    }
+    .header-right {
+        gap: 40px;
     }
 }
 
