@@ -5,16 +5,16 @@ const heroCards = [
     backgroundColor: '#B8DFF5'
   },
   {
-    image: '../public/test1.png',
+    image: 'public/test1.png',
     backgroundColor: '#B8DFF5'
   },
   {
-    icon: '../public/Icon calendar.svg',
+    icon: 'public/Icon calendar.svg',
     text: '6-7 февраля 2025',
     backgroundColor: '#FFFFFF'
   },
   {
-    icon: '../public/Icon place.svg',
+    icon: 'public/Icon place.svg',
     text: 'Санкт-Петербург',
     backgroundColor: '#FFFFFF'
   }
