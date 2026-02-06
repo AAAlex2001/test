@@ -6,16 +6,18 @@
 }
 
 .accordion-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     background: #FAFAFF;
     border-radius: 16px;
     overflow: hidden;
-    transition: border 0.3s ease;
+    padding: 24px 16px;
+    gap: 0;
+    cursor: pointer;
+    transition: gap 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accordion-item.active {
-    border-color: transparent;
+    gap: 16px;
 }
 
 .accordion-header {
@@ -23,14 +25,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 0;
     gap: 16px;
     cursor: pointer;
     position: relative;
 }
 
-.accordion-header:hover {
-    background: #e7f6ff;
+.accordion-item:hover .accordion-title {
+    color: #003366;
 }
 
 
@@ -54,33 +56,15 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url('../public/Button +.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-toggle-icon::before,
-.accordion-toggle-icon::after {
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 22px;
-    border: 2px solid #003366;
-    top: 50%;
-    left: 50%;
-}
-
-.accordion-toggle-icon::before {
-    transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.accordion-toggle-icon::after {
-    transform: translate(-50%, -50%);
-}
-
-.accordion-item.active .accordion-toggle-icon::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.accordion-item.active .accordion-toggle-icon::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+.accordion-item.active .accordion-toggle-icon {
+    transform: rotate(45deg);
 }
 
 .accordion-subtitle {
@@ -104,13 +88,13 @@
 
 .accordion-inner {
     overflow: hidden;
-    padding: 0 32px;
-    transition: padding 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    padding: 0;
+    transition: opacity 0.25s ease;
     opacity: 0;
 }
 
 .accordion-content.expanded .accordion-inner {
-    padding: 16px 32px 32px 32px;
+    padding: 0;
     opacity: 1;
 }
 
@@ -160,7 +144,17 @@
     color: #000000;
 }
 
+@media (min-width: 770px) {
+    .accordion-item {
+        padding: 32px 24px;
+    }
+}
+
 @media (min-width: 1400px) {
+    .accordion-item {
+        padding: 48px;
+    }
+
     .accordion-title {
         font-size: 24px;
         line-height: 140%;

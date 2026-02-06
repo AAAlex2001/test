@@ -40,7 +40,7 @@
 }
 
 .participation-cards .card-content {
-    padding: 32px 24px;
+    padding: 24px 16px;
     gap: 24px;
     justify-content: flex-start;
 }
@@ -85,6 +85,7 @@
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
+    aspect-ratio: 4 / 3;
 }
 
 .yandex-map {
@@ -160,6 +161,10 @@
     .participation-container {
         padding: 24px;
     }
+
+    .participation-cards .card-content {
+        padding: 32px 24px;
+    }
     
     .contacts-section {
         width: calc(100% + 48px);
@@ -195,6 +200,12 @@
     .place-section .participation-cards .card {
         flex: 1;
         min-width: calc(50% - 1px);
+    }
+}
+
+@media (min-width: 1400px) {
+    .participation-cards .card-content {
+        padding: 48px;
     }
 }
 

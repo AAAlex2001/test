@@ -18,15 +18,30 @@ main {
     margin: 0 -16px;
     padding: 92px 16px 24px 16px;
     box-sizing: border-box;
-    border-radius: 16px;
     display: flex;
     gap: 2px;
     flex-direction: column;
+    border-radius: 16px;
+}
+
+.hero .card-wrapper {
+    display: flex;
 }
 
 .hero .card {
     width: 100%;
     height: 100%;
+    flex: 1;
+}
+
+.hero .card-wrapper:has(> .card-image) .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .card-wrapper:has(.card-image) {
+    order: -1;
 }
 
 .advertisement {
@@ -78,6 +93,10 @@ main {
         align-items: stretch;
         justify-content: space-between;
     }
+
+    .hero .card-wrapper:has(.card-image) {
+        order: 0;
+    }
     
     .hero .card-wrapper {
         display: flex;
@@ -105,6 +124,10 @@ main {
         margin: 0 -117px;
         padding: 116px 117px 60px 117px;
     }
+
+    .advertisement .card {
+        max-width: 960px;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -116,9 +139,5 @@ main {
         width: calc(100% + 320px);
         margin: 0 -160px;
         padding: 116px 160px 60px 160px;
-    }
-    
-    .advertisement .card {
-        max-width: 960px;
     }
 }

@@ -1,110 +1,12 @@
-const tabsData = [
-  {
-    id: 'about',
-    title: 'О конференции',
-    sections: [
-      {
-        title: 'О конференции',
-        content: 'Ежегодная научно-практическая конференция «Управление объектами недвижимости и комплексное развитие территорий» проводится в Санкт-Петербургском горном университете императрицы Екатерины II, начиная с 2021 года, и является научным мероприятием, направленным на раскрытие творческих способностей студентов и аспирантов; обеспечение преемственности в подготовке кадров; выявление достижений в научно-исследовательской работе молодых учёных; обсуждение ведущих тем и направлений развития в области землеустройства, кадастров, оценки недвижимости, геодезии и градостроительства.'
-      },
-      {
-        title: 'Цель и задачи',
-        content: 'Конференция проводится с целью обмена актуальной научно-технической информацией по вопросам землеустройства, кадастров, оценки и управления объектами недвижимости между отечественными и зарубежными специалистами, преподавателями, аспирантами и студентами.',
-        tasksSubtitle: 'Задачи конференции:',
-        tasksList: [
-          'Обсуждение проблем и тенденций в области земельно-имущественных отношений, управления земельными ресурсами и объектами недвижимости, оценки недвижимости, а также геодезических работ при осуществлении кадастровой деятельности.',
-          'Развитие интеллектуального творчества студентов, привлечение их к исследовательской, экспериментальной, инновационной деятельности.',
-          'Выявление талантливых и одарённых студентов, проявляющих интерес и способности к самостоятельной научно-исследовательской работе.',
-          'Совершенствование навыков студентов и аспирантов обобщать, оформлять и излагать результаты своих научных исследований.'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'dates',
-    title: 'Важные даты',
-    sections: [
-      {
-        date: 'до 01.11.2024 г.',
-        description: 'Прием материалов для опубликования'
-      },
-      {
-        date: 'до 18.10.2024 г.',
-        description: 'Подача заявок для участия в работе конференции'
-      }
-    ]
-  },
-  {
-    id: 'committee',
-    title: 'Оргкомитет',
-    type: 'accordion',
-    sections: [
-      {
-        title: 'Председатель',
-        members: [
-          {
-            name: 'Иванов И.И.',
-            position: 'доктор технических наук, профессор, ректор Санкт-Петербургского горного университета;'
-          }
-        ]
-      },
-      {
-        title: 'Члены оргкомитета',
-        members: [
-          { name: 'Петраков Д.Г.', position: 'профессор, проректор по деятельности аспирантуры и докторантуры;' },
-          { name: 'Борзенков В.Т.', position: 'генеральный директор Центра ЮНЕСКО;' },
-          { name: 'Васильев В.В.', position: 'декан факультета аспирантуры и докторантуры;' },
-          { name: 'Деменков П.А.', position: 'доцент, декан строительного факультета;' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'sections',
-    title: 'Секции',
-    type: 'sections',
-    stats: [
-      { number: '>2000', label: 'докладчиков' },
-      { number: '>800', label: 'экспертов' },
-      { number: '>200', label: 'университетов и компаний' },
-      { number: '>50', label: 'стран мира' }
-    ],
-    sections: [
-      {
-        title: 'Проблемы и перспективы развития градостроительной и землеустроительной деятельности',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'Кадастровая и индивидуальная оценка объектов недвижимости',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'Современные тенденции ведения Единого государственного реестра недвижимости',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'Маркшейдерско-геодезический мониторинг объектов земной поверхности, попадающих в зону влияния подземных разработок',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'Геодезическое и фотограмметрическое обеспечение кадастровой деятельности',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'ГИС и BIM-технологии в системе управления земельными ресурсами и объектами недвижимости',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      },
-      {
-        title: 'Применение технологий искусственного интеллекта при решении задач землеустройства, кадастров, оценки недвижимости и мониторинга земель.',
-        chairman: 'Быкова Е.Н., заведующий кафедрой землеустройства и кадастров Санкт-Петербургского горного университета императрицы Екатерины II'
-      }
-    ]
-  }
-];
+const tabsData = [];
 
 function renderTabs(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
+  
+  // Skip rendering if container already has content from Drupal
+  if (container.children.length > 0) return;
+  if (tabsData.length === 0) return;
 
   const tabsHTML = `
     <div class="tabs-wrapper">
@@ -192,7 +94,10 @@ function renderTabs(containerId) {
   `;
 
   container.innerHTML = tabsHTML;
+  initTabsInteractivity(container);
+}
 
+function initTabsInteractivity(container) {
   const tabButtons = container.querySelectorAll('.tab-button');
   const tabContents = container.querySelectorAll('.tab-content');
 
@@ -204,7 +109,10 @@ function renderTabs(containerId) {
       tabContents.forEach(content => content.classList.remove('active'));
 
       button.classList.add('active');
-      document.getElementById(targetTab).classList.add('active');
+      const targetContent = document.getElementById(targetTab);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
     });
   });
 
@@ -213,10 +121,9 @@ function renderTabs(containerId) {
     const items = accordion.querySelectorAll('.accordion-item');
 
     items.forEach(item => {
-      const header = item.querySelector('.accordion-header');
       const content = item.querySelector('.accordion-content');
 
-      header.addEventListener('click', () => {
+      item.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         if (isActive) {
           item.classList.remove('active');
@@ -229,5 +136,20 @@ function renderTabs(containerId) {
     });
   });
 }
+
+// Initialize tabs on page load (for Drupal content)
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('tabs-root');
+  if (container && container.querySelector('.tabs-wrapper')) {
+    container.querySelectorAll('.accordion-item.active').forEach(item => {
+      item.classList.remove('active');
+    });
+    container.querySelectorAll('.accordion-content.expanded').forEach(content => {
+      content.classList.remove('expanded');
+    });
+
+    initTabsInteractivity(container);
+  }
+});
 
 if (typeof module !== 'undefined') module.exports = { renderTabs };

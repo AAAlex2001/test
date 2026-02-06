@@ -26,7 +26,6 @@ function renderAccordion(selector) {
     if (!root) return;
 
     const accordionHTML = accordionData.map((item, index) => {
-        const isFirst = index === 0;
         
         let contentHTML = '';
         if (Array.isArray(item.content) && Array.isArray(item.subtitle)) {
@@ -39,12 +38,12 @@ function renderAccordion(selector) {
         }
         
         return `
-            <div class="accordion-item ${isFirst ? 'active' : ''}">
+            <div class="accordion-item">
                 <div class="accordion-header">
                     <h2 class="accordion-title">${item.title}</h2>
                     <div class="accordion-toggle-icon"></div>
                 </div>
-                <div class="accordion-content ${isFirst ? 'expanded' : ''}">
+                <div class="accordion-content">
                     ${contentHTML}
                 </div>
             </div>
