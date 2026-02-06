@@ -105,6 +105,9 @@ const tabsData = [
 function renderTabs(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
+  
+  if (container.children.length > 0) return;
+  if (tabsData.length === 0) return;
 
   const tabsHTML = `
     <div class="tabs-wrapper">
@@ -192,7 +195,10 @@ function renderTabs(containerId) {
   `;
 
   container.innerHTML = tabsHTML;
+  initTabsInteractivity(container);
+}
 
+function initTabsInteractivity(container) {
   const tabButtons = container.querySelectorAll('.tab-button');
   const tabContents = container.querySelectorAll('.tab-content');
 
@@ -204,7 +210,10 @@ function renderTabs(containerId) {
       tabContents.forEach(content => content.classList.remove('active'));
 
       button.classList.add('active');
-      document.getElementById(targetTab).classList.add('active');
+      const targetContent = document.getElementById(targetTab);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
     });
   });
 
@@ -213,10 +222,9 @@ function renderTabs(containerId) {
     const items = accordion.querySelectorAll('.accordion-item');
 
     items.forEach(item => {
-      const header = item.querySelector('.accordion-header');
       const content = item.querySelector('.accordion-content');
 
-      header.addEventListener('click', () => {
+      item.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         if (isActive) {
           item.classList.remove('active');
@@ -229,5 +237,19 @@ function renderTabs(containerId) {
     });
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('tabs-root');
+  if (container && container.querySelector('.tabs-wrapper')) {
+    container.querySelectorAll('.accordion-item.active').forEach(item => {
+      item.classList.remove('active');
+    });
+    container.querySelectorAll('.accordion-content.expanded').forEach(content => {
+      content.classList.remove('expanded');
+    });
+
+    initTabsInteractivity(container);
+  }
+});
 
 if (typeof module !== 'undefined') module.exports = { renderTabs };

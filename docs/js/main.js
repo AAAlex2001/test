@@ -32,6 +32,7 @@ const advertisementCards = [
 document.addEventListener('DOMContentLoaded', () => {
   const heroContainer = document.getElementById('hero');
   if (!heroContainer) return;
+  if (heroContainer.children.length > 0) return;
   
   heroCards.forEach((props, index) => {
     const wrapper = document.createElement('div');

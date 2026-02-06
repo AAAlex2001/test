@@ -55,6 +55,18 @@
         justify-content: space-between;
         align-items: center;
     }
+    
+    .footer-copyright {
+        order: 1;
+    }
+    
+    .footer-link-privacy {
+        order: 2;
+    }
+    
+    .footer-link-cookie {
+        order: 3;
+    }
 }
 
 @media (min-width: 1920px) {
