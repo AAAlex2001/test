@@ -74,6 +74,14 @@
     width: 100%;
 }
 
+.tab-content#dates {
+    flex-direction: column;
+}
+
+.tab-content#dates .date-card {
+    width: 100%;
+}
+
 .tab-content.active {
     display: flex;
     width: 100%;

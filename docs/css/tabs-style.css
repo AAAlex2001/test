@@ -80,6 +80,14 @@
     width: 100%;
 }
 
+.tab-content#dates {
+    flex-direction: column;
+}
+
+.tab-content#dates .date-card {
+    width: 100%;
+}
+
 .tab-content.active {
     display: flex;
     width: 100%;
@@ -225,13 +233,13 @@
     .tab-content {
     flex-direction: row;
     }
-    #tab2 {
+    #dates {
         flex-direction: column;
     }
-    #tab3 {
+    #committee {
         flex-direction: column;
     }
-    #tab4 {
+    #sections {
         flex-direction: column;
     }
 }
@@ -301,7 +309,7 @@
 }
 
 @media (min-width: 1400px) {
-    #tab2 {
+    #dates {
         flex-direction: column;
     }
     .content-card {
