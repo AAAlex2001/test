@@ -211,23 +211,16 @@ function renderTabs(containerId) {
   const accordions = container.querySelectorAll('.accordion');
   accordions.forEach(accordion => {
     accordion.addEventListener('click', (e) => {
-      const header = e.target.closest('.accordion-header');
-      if (!header || !accordion.contains(header)) return;
+      const item = e.target.closest('.accordion-item');
+      if (!item || !accordion.contains(item)) return;
 
-      const item = header.closest('.accordion-item');
-      if (!item) return;
-
-      const items = accordion.querySelectorAll('.accordion-item');
       const content = item.querySelector('.accordion-content');
       const isActive = item.classList.contains('active');
 
-      items.forEach(i => {
-        i.classList.remove('active');
-        const c = i.querySelector('.accordion-content');
-        if (c) c.classList.remove('expanded');
-      });
-
-      if (!isActive) {
+      if (isActive) {
+        item.classList.remove('active');
+        if (content) content.classList.remove('expanded');
+      } else {
         item.classList.add('active');
         if (content) content.classList.add('expanded');
       }
